@@ -21,7 +21,7 @@ jobs:
         env:
           POSTGRES_DB: "cicd_database"
           POSTGRES_USER: "cicd_user"
-          POSTGRES_PASSWORD: "cicd_password"
+          POSTGRES_PASSWORD: ${{ secrets.DB_PASSWORD }}
         ports:
           - 5432:5432
         options: >-

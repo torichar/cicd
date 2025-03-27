@@ -2,7 +2,7 @@ import express, { Request, Response } from "express";
 import ComputeUtil from "./util/compute.util";
 
 const app = express();
-
+console.log("Starting server");
 app.get("/add/:a/:b", (request: Request, response: Response) => {
   const a = parseInt(request.params.a);
   const b = parseInt(request.params.b);
