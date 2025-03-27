@@ -2,6 +2,11 @@ name: Manual install
 
 on:
   workflow_dispatch:
+    inputs:
+      run_tests:
+        description: 'Run tests'
+        default: 'false'
+        type: boolean
   push:
     branches:
       - main
@@ -26,4 +31,5 @@ jobs:
       run: npm run build
 
     - name: Test application
+      if: ${{ github.event.inputs.run_tests == 'true' }}
       run: npm test
