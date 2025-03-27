@@ -2,6 +2,9 @@ name: Manual install
 
 on:
   workflow_dispatch:
+  push:
+    branches:
+      - main
 
 jobs:
   install:
